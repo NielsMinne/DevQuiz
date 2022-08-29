@@ -1,0 +1,231 @@
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* --------------------------------------------------------------------------------------- */
+body {
+    background: var(--body-background-color);
+    color: var(--primary-text-color);
+    font-family: var(--font-family-lato);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/backdrop.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+h2 {
+    font-size: 1.3rem;
+    padding: 0.9rem 0.6rem;
+    font-family: var(--font-family-lato);
+    font-weight: 500;
+    text-align: center;
+    word-break: var(--break);
+}
+
+h3 {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+p {
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+small {
+    position: absolute;
+    bottom: 50px;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/* Helper Classes */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container */
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+    overflow-x: hidden;
+
+}
+
+.quiz-image {
+    height: 20vh;
+    margin: 2rem;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/**
+* Quiz.html 
+*/
+
+/* Style the header with score,questionIndex and timer */
+.quizHeader {
+    --border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff8800a6;
+    height: 4rem;
+    border: 1px solid white;
+    border-radius: var(--border-radius);
+}
+
+/* The bar that decreases with time */
+.round-time-bar[data-style="smooth"] {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: .5rem;
+
+    background: rgba(255, 136, 0, 0.6);
+    animation: roundtime calc(var(--duration) * 1s) linear forwards;
+}
+
+@keyframes roundtime {
+    to {
+        /* More performant than animating `width` */
+        transform: scaleX(0);
+    }
+}
+
+/* div containting answers */
+.answers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--gap);
+    width: 100%;
+    max-width: 700px;
+}
+
+.question-header {
+    font-weight: 500;
+    font-size: 1.45rem;
+}
+
+/* styling answers */
+.anchor-style {
+    text-decoration: none;
+    color: #FFF;
+    font-family: var(--font-family-poppins);
+}
+
+.anchor-style:hover {
+    --border: 1px solid var(--button-color);
+    box-shadow: var(--inner-shadow);
+    border: var(--border);
+}
+
+.answer {
+    background-color: var(--background-color-answers);
+    border: var(--border);
+    text-align: center;
+    padding: .9rem;
+    border-radius: var(--border-radius);
+    word-break: var(--break);
+}
+
+.timer {
+    padding-right: 5rem;
+    font-size: 1.5rem;
+}
+
+/* helper class to for visual feedback */
+.correct {
+    background-color: var(--color-correct);
+}
+
+.wrong {
+    background-color: var(--color-wrong);
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/**
+* end.html
+*/
+
+.username {
+    margin: 0 5rem;
+    margin-bottom: 1rem;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    text-indent: 10px;
+    width: clamp(225px, 30vw, 300px);
+}
+
+.username:disabled {
+    background-color: white;
+    opacity: 85%;
+}
+
+.icon-arrow {
+    position: absolute;
+    bottom: 60px;
+}
+
+.answer-container {
+    max-width: 50em;
+    margin-top: 22em;
+    overflow-x: hidden;
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+
+/**
+* highscore.html
+*/
+
+.highscore {
+    list-style: none;
+    padding: 1rem 1rem;
+    width: 85vw;
+    max-width: 300px;
+    background-color: var(--background-color-answers);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.highscore:hover {
+    --border: 1px solid var(--button-color);
+    transform: scale(1.05);
+    border: var(--border);
+}
+
+.score-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    padding: 0;
+}

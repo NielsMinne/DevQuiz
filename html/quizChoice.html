@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app" class='flex-center flex-column hide'>
+
+    <h1>Choose your difficulty</h1>
+    <form class='difficulty'>
+      <input type="radio" class="radio-button" id="easy" name="difficulty" value="Easy" checked='true'>
+      <label for="easy">Easy</label><br>
+      <input type="radio" class="radio-button" id="medium" name="difficulty" value="Medium">
+      <label for="medium">Medium</label><br>
+      <input type="radio" class="radio-button" id="hard" name="difficulty" value="Hard">
+      <label for="hard">Hard</label>
+    </form>
+
+    <h1>How many questions?</h1>
+    <input type="range" id="amount" name="amountOfQuestions" min="1" max="20" value='10'>
+    <h3 class='slider-input'>10</h3>
+
+    <h1>What category do you want?</h1>
+    <select id="category" name="categorylist" form="categoryform">
+      <option value="Linux">Linux</option>
+      <option value="Docker">Docker</option>
+      <option value="DevOps">DevOps</option>
+      <option value="Code">Code</option>
+      <option value="SQL">SQL</option>
+      <option value="CMS">CMS</option>
+      <option value="bash">Bash</option>
+    </select>
+
+    <form id='choiceSubmit' action="../html/quiz.html">
+      <button type="submit" class="submit-btn">Play!</button>
+    </form>
+
+  </div>
+
+
+  <script type="module" src="../js/submitChoices.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+:root {
+    --body-background-color: #0f0e17;
+    --primary-text-color: #dde0ff;
+    
+    --button-color:#ff8800;
+    --button-text-color:#fffffe;
+    --inner-shadow: inset 0 0 8px rgba(5, 5, 5, 0.65);
+    --background-color-answers: rgba(255, 255, 255, 0.35);
+
+    --font-family-lato: 'Lato', sans-serif;
+    --font-family-poppins: 'Poppins', sans-serif;;
+
+    --color-correct: hsl(114 60% 40% / 0.8);
+    --color-wrong: hsl(0 70% 40% / 0.8);
+    
+    --border-radius : 5px;
+    --border: 1px solid white;
+    
+    --break: break-word;
+    --duration: 20;
+    --gap:.5rem;
+}
